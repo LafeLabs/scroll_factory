@@ -25,10 +25,15 @@ echo $listtext;
 <table>
     <tr>
         <td>
+            <a href = "../">
+                <img src = "../factory_symbols/factory.svg" style = "width:80px"/>
+            </a>
+        </td>
+        <td>
     <a href = "editor.php"><img style = "width:80px" src = "../factory_symbols/editor.svg"/></a>
         </td>
         <td>
-        <a href = "../combiner/"><img style = "width:80px" src = "../factory_symbols/combiner.svg"/></a>
+        <a href = "../image2scroll/"><img style = "width:80px" src = "../factory_symbols/combiner.svg"/></a>
         </td>
     </tr>
 </table>
