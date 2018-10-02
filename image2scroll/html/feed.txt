@@ -121,7 +121,7 @@ document.getElementById("publishbutton").onclick = function(){
         
         newa = document.createElement("a");
         newa.innerHTML = currentFile;
-        newa.href =  "../scroll/scrolleditor.php?path=" + currentFile + "/";
+        newa.href =  "../scroll/scrolls/" + currentFile + "/scrolleditor.php";
         document.getElementById("pagelink").appendChild(newa);
     }
     else{

@@ -1,9 +1,0 @@
-
-<a href = "../">../</a>
-
-<h1>Scroll Title</h1>
-
-<figure>
-<img src = ""/><!--img-->
-<figcaption>Figure x. </figcaption>
-</figure>

@@ -1,10 +1,12 @@
 
-<figure>
-    <img src = "images/image0.svg"/>
-<figcaption>Golden spiral</figcaption>
+<h1>foo</h1>
+
+<figure id="f0">
+    <img src="images/image0.svg">
+<figcaption>foobar  derp derp</figcaption>
 </figure>
 
-<figure>
-    <img src = "images/image1.PNG"/>
-<figcaption>geometron in $\LaTeX$</figcaption>
+<figure id="f1">
+    <img src="images/image1.PNG">
+<figcaption></figcaption>
 </figure>

@@ -17,11 +17,11 @@
     mkdir("../scroll/scrolls/".$filename);
         mkdir("../scroll/scrolls/".$filename."/images");
         mkdir("../scroll/scrolls/".$filename."/html");
-        copy("../scroll/index.php","../scroll/scrolls/".$filename."/index.php");    
+        copy("../scroll/php/indextemplate.txt","../scroll/scrolls/".$filename."/index.php");    
         copy("../scroll/scrolleditor.php","../scroll/scrolls/".$filename."/scrolleditor.php");    
         copy("../scroll/filesaver.php","../scroll/scrolls/".$filename."/filesaver.php");    
         copy("../scroll/fileloader.php","../scroll/scrolls/".$filename."/fileloader.php");    
-    $scrolltext = "";
+    $scrolltext = "<h1>".$filename."</h1>\n";
     $imageindex = 0;
     foreach($imagelist as $value){
             $fileextension = substr($value,-4);

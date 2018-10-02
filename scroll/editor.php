@@ -7,17 +7,8 @@
 <div id = "linkscroll">
     <a href = "text2php.php">text2php.php</a>
     <a href = "index.php">index.php</a>
-    <a href = "figurelist.php">figurelist.php</a>
-    <a href = "scrolleditor.php">scrolleditor.php</a>
-    <a href = "texeditor.php">texeditor.php</a>
-    <a href = "jupyter.php">jupyter.php</a>
-    <a href = "scrolllist.php">scrolllist.php</a>
     <a href = "dnagenerator.php">dnagenerator.php</a>
 
-    <a href = "tree.php">tree.php</a>
-
-    <div class = "button" id = "imgbutton">&ltIMG src = " "/&gt</div>
-    <div class = "button" id = "pbutton">&ltP&gt  &lt/P&gt</div>
 
 </div>
 <div id = "namediv"></div>
@@ -27,18 +18,12 @@
     <div class = "php file">php/editor.txt</div>
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/scrolleditor.txt</div>
-    <div class = "php file">php/texeditor.txt</div>
     <div class = "php file">php/filesaver.txt</div>
     <div class = "php file">php/fileloader.txt</div>
+    <div class = "php file">php/indextemplate.txt</div>
 
-    <div class = "php file">php/scrolllist.txt</div>
-    <div class = "php file">php/feedsaver.txt</div>
 
     <div class = "php file">php/text2php.txt</div>
-    <div class = "php file">php/figurelist.txt</div>
-    <div class = "php file">php/jupyter.txt</div>
-    <div class = "php file">php/newdir.txt</div>
-    <div class = "php file">php/tree.txt</div>
     <div class = "php file">php/dnagenerator.txt</div>
     <div class = "php file">php/replicator.txt</div>
 
