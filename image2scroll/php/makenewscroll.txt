@@ -16,8 +16,12 @@
 
     mkdir("../scroll/scrolls/".$filename);
         mkdir("../scroll/scrolls/".$filename."/images");
+        mkdir("../scroll/scrolls/".$filename."/html");
         copy("../scroll/index.php","../scroll/scrolls/".$filename."/index.php");    
-        
+        copy("../scroll/scrolleditor.php","../scroll/scrolls/".$filename."/scrolleditor.php");    
+        copy("../scroll/filesaver.php","../scroll/scrolls/".$filename."/filesaver.php");    
+        copy("../scroll/fileloader.php","../scroll/scrolls/".$filename."/fileloader.php");    
+    $scrolltext = "";
     $imageindex = 0;
     foreach($imagelist as $value){
             $fileextension = substr($value,-4);
@@ -27,8 +31,13 @@
             $patharray = explode("/",$value);
             $fullfilename = "../".$patharray[count($patharray) - 3]."/".$patharray[count($patharray) - 2]."/".$patharray[count($patharray) - 1];
             copy($fullfilename,"../scroll/scrolls/".$filename."/images/image".$imageindex.$fileextension);    
+            $scrolltext .= "\n<figure>\n    <img src = \"";
+            $scrolltext .= "images/image".$imageindex.$fileextension."\"/>";
+            $scrolltext .= "\n<figcaption></figcaption>\n";
+            $scrolltext .= "</figure>\n";
             $imageindex++;
     }
-
+    
+    file_put_contents("../scroll/scrolls/".$filename."/html/scroll.txt",$scrolltext);
     
 ?>

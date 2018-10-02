@@ -1,0 +1,10 @@
+
+<figure>
+    <img src = "images/image0.svg"/>
+<figcaption>Golden spiral</figcaption>
+</figure>
+
+<figure>
+    <img src = "images/image1.PNG"/>
+<figcaption>geometron in $\LaTeX$</figcaption>
+</figure>

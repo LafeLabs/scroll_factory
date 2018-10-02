@@ -1,0 +1,29 @@
+<svg width="500" height="500" viewbox = "0 0 500 500"  xmlns="http://www.w3.org/2000/svg">
+
+<!--
+<json>
+{
+    "svgwidth": 1368,
+    "svgheight": 798,
+    "unit": 100,
+    "x0": 684,
+    "y0": 399,
+    "x0rel": 0,
+    "y0rel": 0,
+    "glyph": "0226,",
+    "table": []
+}
+</json>
+-->
+	<path d = "M58 371 L58 129 L450 129 L450 371 L58 371 Z" stroke = "black" stroke-width = "6" fill = "none" />	<path d = "M300 371 L300 129 L58 129 L58 371 L300 371 Z" stroke = "black" stroke-width = "6" fill = "none" />  <path d="M57.999999999999915 370.99999999999994           A242.00000000000003 242.00000000000003 0 0 1 299.99999999999994 128.99999999999997" fill = "none" stroke = "black" stroke-width = "6" />
+  <path d="M299.99999999999994 128.99999999999994           A149.56422527747458 149.56422527747458 0 0 1 449.5642252774745 278.5642252774745" fill = "none" stroke = "black" stroke-width = "6" />
+    <line x1="300" y1="279" x2="450" y2="279" style="stroke:black;stroke-width:6" />
+  <path d="M449.5642252774745 278.5642252774745           A92.43577472252545 92.43577472252545 0 0 1 357.12845055494904 371" fill = "none" stroke = "black" stroke-width = "6" />
+    <line x1="357" y1="279" x2="357" y2="371" style="stroke:black;stroke-width:6" />
+  <path d="M357.12845055494904 371           A57.128450554949104 57.128450554949104 0 0 1 299.99999999999994 313.8715494450509" fill = "none" stroke = "black" stroke-width = "6" />
+    <line x1="357" y1="314" x2="300" y2="314" style="stroke:black;stroke-width:6" />
+  <path d="M299.99999999999994 313.8715494450509           A35.30732416757634 35.30732416757634 0 0 1 335.30732416757627 278.5642252774746" fill = "none" stroke = "black" stroke-width = "6" />
+    <line x1="335" y1="314" x2="335" y2="279" style="stroke:black;stroke-width:6" />
+  <path d="M335.30732416757627 278.5642252774746           A21.821126387372765 21.821126387372765 0 0 1 357.12845055494904 300.38535166484735" fill = "none" stroke = "black" stroke-width = "6" />
+    <line x1="335" y1="300" x2="357" y2="300" style="stroke:black;stroke-width:6" />
+</svg>
