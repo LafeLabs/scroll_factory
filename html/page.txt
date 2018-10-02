@@ -1,6 +1,7 @@
 <p>
     <a href = "editor.php">editor.php</a>
 </p>
+
 <ul>
     <li>
         <a href = "images/"><img style = "width:80px" src = "factory_symbols/images.svg"/></a>
@@ -12,9 +13,13 @@
         <a href = "curve/">curve/</a>
     </li>
     <li>
-        <a href = "image2scroll/">image2scroll/</a>
+        <a href = "image2scroll/">
+            <img style = "width:80px" src = "factory_symbols/combiner.svg"/>
+            </a>
     </li>
     <li>
-        <a href = "scroll/">scroll/</a>
+        <a href = "scroll/">
+        <img style = "width:80px" src = "factory_symbols/scroll.svg"/>    
+        </a>
     </li>
 </ul>
