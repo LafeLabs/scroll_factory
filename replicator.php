@@ -1,26 +1,22 @@
 <?php
 
-    $url = "https://raw.githubusercontent.com/LafeLabs/factory/master/json/dna.txt";
+    $url = "https://raw.githubusercontent.com/LafeLabs/scroll_factory/master/json/dna.txt";
     $dnaraw = file_get_contents($url);
     $dna =json_decode($dnaraw);
     $baseurl = explode("json",$url)[0];
 
     //sources
-    mkdir("page");
-        mkdir("page/pages");
-        mkdir("page/json");
     mkdir("factory_symbols");
-    mkdir("textfeed");
-        mkdir("textfeed/html");
-    mkdir("linkfeed");
-        mkdir("linkfeed/html");
     mkdir("symbol");
         mkdir("symbol/svg");
+    mkdir("curve");
+        mkdir("curve/svg");
     mkdir("images");
         mkdir("images/images");
-    mkdir("combiner");
-    mkdir("aligner");
+    mkdir("image2scroll");
         mkdir("aligner/memes");
+    mkdir("scroll");
+        mkdir("scroll/scrolls");
 
     foreach($dna as $dirs){
         mkdir($dirs->path);

@@ -27,11 +27,13 @@ echo file_get_contents("html/scroll.txt");
 echo file_get_contents("html/scroll.txt");    
 ?>
 </div>
+<table id = "linktable">
+    <tr>
+        <td><a href = "index.php">SCROLL READER</a></td>
+        <td><a href = "../../">../../</a></td>
+    </tr>
+</table>
 
-<div id = "linkscroll">
-    <a href = "index.php">index.php</a>
-    <a href = "../../">../../</a>
-</div>
 
 <div id="maineditor" contenteditable="true" spellcheck="true"></div>
 
@@ -41,10 +43,23 @@ echo file_get_contents("html/scroll.txt");
 figureindex = 0;
 
 figures = document.getElementById("notexdatadiv").getElementsByTagName("figure");
+visiblefigures = document.getElementById("scrolldisplay").getElementsByTagName("figure");
 
-for(var index = 0;index < figures.length;index++){
-    figures[index].id = "f" + index.toString();
+currentFile = "html/scroll.txt";
+
+for(var index = 0;index < visiblefigures.length;index++){
+    figures[index].className = "f" + index.toString();
+    visiblefigures[index].className = "f" + index.toString();
+    visiblefigures[index].onclick = function(){
+        visiblefigures[figureindex].style.border = "none";
+        visiblefigures[figureindex].style.backgroundColor = "white";
+        figureindex = parseInt(this.className.substr(1));
+        document.getElementById("captioneditor").value = this.getElementsByTagName("figcaption")[0].innerHTML;
+        visiblefigures[figureindex].style.border = "solid";
+        visiblefigures[figureindex].style.backgroundColor = "#d0ffd0";
+    }
 }
+
 
 document.getElementById("captioneditor").value = figures[figureindex].getElementsByTagName("figcaption")[0].innerHTML;
 
@@ -60,21 +75,23 @@ document.getElementById("captioneditor").onkeyup = function(){
     httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
     httpc.send("data="+data+"&filename="+currentFile);//send text to filesaver.php
 
+    for(var index = 0;index < visiblefigures.length;index++){
+        figures[index].className = "f" + index.toString();
+        visiblefigures[index].className = "f" + index.toString();
+        visiblefigures[index].onclick = function(){
+            visiblefigures[figureindex].style.border = "none";
+            visiblefigures[figureindex].style.backgroundColor = "white";
+            figureindex = parseInt(this.className.substr(1));
+            document.getElementById("captioneditor").value = this.getElementsByTagName("figcaption")[0].innerHTML;
+            visiblefigures[figureindex].style.border = "solid";
+            visiblefigures[figureindex].style.backgroundColor = "#d0ffd0";
+
+        }
+    }
+
 }
 
-currentFile = "html/scroll.txt";
-    
-var httpc = new XMLHttpRequest();
-httpc.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        filedata = this.responseText;
-        editor.setValue(filedata);
-        document.getElementById("scrolldisplay").innerHTML = filedata;
-        MathJax.Hub.Typeset();//tell Mathjax to update the math
-    }
-};
-httpc.open("GET", "fileloader.php?filename=" + currentFile, true);
-httpc.send();
+
 
 
 
@@ -83,6 +100,8 @@ editor.setTheme("ace/theme/cobalt");
 editor.getSession().setMode("ace/mode/html");
 editor.getSession().setUseWrapMode(true);
 editor.$blockScrolling = Infinity;
+
+editor.setValue(document.getElementById("notexdatadiv").innerHTML);
 
 document.getElementById("maineditor").onkeyup = function(){
     data = encodeURIComponent(editor.getSession().getValue());
@@ -95,45 +114,38 @@ document.getElementById("maineditor").onkeyup = function(){
     document.getElementById("scrolldisplay").innerHTML = editor.getSession().getValue();
     document.getElementById("notexdatadiv").innerHTML = editor.getSession().getValue();
     MathJax.Hub.Typeset();//tell Mathjax to update the math
+    for(var index = 0;index < visiblefigures.length;index++){
+        figures[index].className = "f" + index.toString();
+        visiblefigures[index].className = "f" + index.toString();
+        visiblefigures[index].onclick = function(){
+            visiblefigures[figureindex].style.border = "none";
+            visiblefigures[figureindex].style.backgroundColor = "white";
+            figureindex = parseInt(this.className.substr(1));
+            document.getElementById("captioneditor").value = this.getElementsByTagName("figcaption")[0].innerHTML;
+            visiblefigures[figureindex].style.border = "solid";
+            visiblefigures[figureindex].style.backgroundColor = "#d0ffd0";
+        }
+    }
 
 }
 
+visiblefigures[figureindex].style.backgroundColor = "#d0ffd0";
 
 </script>
 <style>
-a{
-    color:white;
-    display:block;
-    margin-bottom:0.5em;
-    margin-left:0.5em;
-}
-body{
-    background-color:#404040;
-}
 
-
-#linkscroll{
+#linktable{
     position:absolute;
-    overflow:scroll;
-    top:0%;
-    bottom:50%;
-    right:0%;
-    left:77%;
-    border:solid;
-    border-radius:5px;
-    border-width:3px;
-    background-color:#101010;
-    font-family:courier;
-    font-size:18px;
-    
+    right:0px;
+    top:0px;
 }
 
 #maineditor{
     position:absolute;
-    left:41%;
     top:5em;
     bottom:10px;
-    right:25%;
+    right:10px;
+    width:35%;
 }
 #scrolldisplay{
     position:absolute;
@@ -142,7 +154,7 @@ body{
     color:black;
     left:10px;
     bottom:40%;
-    right:60%;
+    width:50%;
     top:5em;
     border:solid;
     border-width:3px;
@@ -154,8 +166,10 @@ body{
     position:absolute;
     bottom:10px;
     left:0px;
-    width:40%;
+    width:50%;
     height:35%;
+    background-color:#d0ffd0;
+
 }
 #scrolldisplay p,li,pre{
     width:80%;
@@ -187,6 +201,7 @@ figure img{
 }
 figure{
     width:80%;
+    cursor:pointer;
 }
 figure figcaption{
     width:100%;

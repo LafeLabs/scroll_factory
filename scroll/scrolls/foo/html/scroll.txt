@@ -1,12 +1,12 @@
 
-<h1>foo</h1>
+<h1>Golden Ratio</h1>
 
-<figure id="f0">
+<figure class="f0">
     <img src="images/image0.svg">
-<figcaption>foobar  derp derp</figcaption>
+<figcaption>golden spiral</figcaption>
 </figure>
 
-<figure id="f1">
-    <img src="images/image1.PNG">
-<figcaption></figcaption>
+<figure class="f1">
+    <img src="images/image1.svg">
+<figcaption>golden triangle</figcaption>
 </figure>

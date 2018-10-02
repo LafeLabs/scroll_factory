@@ -44,22 +44,6 @@ $finalstring .= ",\n";
 $finalstring .= getALLfiles("factory_symbols");
 $finalstring .= ",\n";
 
-$finalstring .= getfiles("page/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("page/html");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("textfeed/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("textfeed/json");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("linkfeed/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("linkfeed/json");
-$finalstring .= ",\n";
-
-
 $finalstring .= getfiles("symbol/php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("symbol/html");
@@ -73,22 +57,29 @@ $finalstring .= ",\n";
 $finalstring .= getfiles("symbol/json");
 $finalstring .= ",\n";
 
+$finalstring .= getfiles("curve/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("curve/html");
+$finalstring .= ",\n";
+$finalstring .= getfiles("curve/javascript");
+$finalstring .= ",\n";
+$finalstring .= getfiles("curve/json");
+$finalstring .= ",\n";
 
-$finalstring .= getfiles("combiner/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("combiner/html");
-$finalstring .= ",\n";
-$finalstring .= getfiles("combiner/json");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("aligner/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("aligner/html");
-$finalstring .= ",\n";
 
 $finalstring .= getfiles("images/php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("images/json");
+$finalstring .= ",\n";
+
+$finalstring .= getfiles("image2scroll/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("image2scroll/html");
+$finalstring .= ",\n";
+$finalstring .= getfiles("image2scroll/json");
+$finalstring .= ",\n";
+
+$finalstring .= getfiles("scroll/php");
 
 
 $finalstring .= "\n]";
